@@ -1,0 +1,192 @@
+// helper style
+@use "./sass/helpers/colors" as *;
+@use "./sass/helpers/globalStyle";
+
+// components ( header )
+@import "./sass/components/header";
+
+// main section
+main {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/slide-01.jpg);
+  .main-section-content {
+    color: white;
+    padding: 40px 50px; // set padding for testing
+    @media (max-width: 767px) {
+      padding: 40px 10px;
+    }
+    .main-title {
+      max-width: 60%;
+      font-size: 60px;
+      font-weight: bold;
+      em {
+        color: $main-c;
+      }
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+      @media (max-width: 767px) {
+        font-size: 40px;
+      }
+    }
+    hr.br-line {
+      opacity: 1;
+      height: 7px;
+      width: 70px;
+      margin: 20px 0;
+      border-radius: 10px;
+      background-color: white;
+    }
+    P {
+      max-width: 50%;
+      text-align: justify;
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+    }
+    .btns {
+      .btn:last-of-type {
+        border-color: $main-c;
+        background-color: $main-c;
+        &:hover {
+          background-color: $main-alt-c;
+        }
+      }
+    }
+  }
+}
+// end of main section
+
+// services
+.services {
+  .service {
+    height: 170px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 10px #eeeeee80, -5px -5px 10px #eeeeee80;
+    @media (max-width: 567px) {
+      height: auto;
+      flex-flow: column;
+      padding: 8px 20px !important;
+    }
+    .serv-icon {
+      color: $green-c;
+      transition: 0.5s;
+      transform: translateY(-10px);
+    }
+    .serv-title {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    &:hover {
+      .serv-icon {
+        transform: translateY(10px);
+      }
+    }
+  }
+}
+// end of services
+
+// components ( simple-contact )
+@import "./sass/components/simple_contact";
+
+// about content
+.about-content {
+  .statis-btns {
+    button {
+      border: none;
+      font-weight: 600;
+      padding: 12px 35px;
+      color: $dark-blue-c;
+      box-shadow: 5px 5px 10px #eeeeee80, -5px -5px 10px #eeeeee80;
+      &:hover {
+        cursor: pointer;
+      }
+      &.active {
+        color: $main-c;
+      }
+    }
+  }
+  .statis-tables {
+    overflow-x: auto;
+    table {
+      min-width: 700px !important;
+    }
+    tr {
+      border-bottom: 1px solid #eeee;
+    }
+    th,
+    td {
+      padding: 20px 10px;
+    }
+    tbody {
+      th {
+        color: $green-c;
+      }
+    }
+  }
+}
+// end of about content
+
+// contact
+.contact {
+  background-image: url("../images/calculator-bg.jpg");
+  .contact-img {
+    img {
+      transform: translateY(-40px);
+    }
+  }
+  form {
+    input,
+    select {
+      border: 0;
+      color: $dark-blue-c;
+      background-color: #5f697c;
+    }
+    input::placeholder,
+    select {
+      color: white;
+    }
+    button[type="submit"] {
+      border: $main-c;
+      background-color: $main-c;
+      &:hover {
+        background-color: $main-alt-c;
+      }
+    }
+  }
+}
+// end of contact
+
+// testimonial
+.testimonials-content {
+  .item {
+    padding: 10px;
+    .testimonial {
+      box-shadow: 5px 5px 10px #eeeeee80, -5px -5px 10px #eeeeee80;
+      .testimonial-img {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .owl-dot.active span {
+    background-color: $main-c !important;
+  }
+  .owl-dot span {
+    background-color: #ff4f1acb !important;
+  }
+}
+// end of testimonial
+
+// partiners
+
+@import "./sass/components/partiners";
+// end of partiners
+
+// footer
+@import "./sass/components/footer";
+// end of footer

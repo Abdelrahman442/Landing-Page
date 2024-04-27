@@ -1,0 +1,31 @@
+header {
+  img {
+    @media (max-width: 375px) {
+      width: 180px;
+    }
+  }
+  .header-links {
+    .nav-link {
+      color: white;
+      transition: 0.5s;
+      &:hover,
+      &.active {
+        color: $main-c;
+      }
+    }
+    .nisted-menu {
+      padding: 0;
+      overflow: hidden;
+      .dropdown-item {
+        font-size: 14px;
+        transition: 0.5s;
+        padding: 8px 15px;
+        border-bottom: 1px solid #eee;
+        &:hover {
+          padding-left: 25px;
+          background-color: white !important;
+        }
+      }
+    }
+  }
+}

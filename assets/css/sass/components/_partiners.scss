@@ -1,0 +1,10 @@
+.partiners {
+  padding: 60px;
+  background-color: $dark-blue-c;
+  a {
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

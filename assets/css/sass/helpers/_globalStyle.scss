@@ -1,0 +1,24 @@
+@use "./colors" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-head {
+  h6 {
+    color: $main-c;
+  }
+  h2 {
+    color: $dark-blue-c;
+  }
+}
